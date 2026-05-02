@@ -110,7 +110,7 @@ This script:
 3. Trains WCP weight networks for all benchmarks (Δ = 0.01) and evaluates
    per-scenario empirical coverage
 
-Runtime of (1) and (2) combined is less than an hour on an Intel(R) Xeon(R) Silver 4216 CPU @ 2.10GHz. (3) also runs in less than an hour on an NVIDIA RTX A2000,
+Runtime of (1) and (2) combined is less than an hour on an Intel(R) Xeon(R) Silver 4216 CPU @ 2.10GHz. (3) also runs in less than an hour on an NVIDIA RTX A2000.
 
 ---
 
