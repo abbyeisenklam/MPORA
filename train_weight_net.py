@@ -149,6 +149,7 @@ def plot_cluster_histogram(
     plt.legend(patches, all_labels, fontsize=16)
     plt.tight_layout()
 
+    os.makedirs(save_dir, exist_ok=True)
     out = os.path.join(save_dir, f"{task}_cluster_insn_sum_hist.pdf")
     plt.savefig(out, dpi=300, bbox_inches="tight")
     plt.close()
