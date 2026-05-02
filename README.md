@@ -34,7 +34,7 @@ Details for reproducing specific results in the paper can be found by searching 
 
 ## Setup
 
-Pull the pre-built image (recommended):
+Pull the pre-built image (recommended, .csv files in `profiles/` exceed maximum size for Git):
 
 ```bash
 docker pull abbyeisenklam/mpora-artifact:latest
