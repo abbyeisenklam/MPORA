@@ -14,6 +14,7 @@ COPY splits/ splits/
 # Copy code only
 COPY *.py *.md *.txt *.sh ./
 COPY c_implementation/ c_implementation/
+COPY kernel/ kernel/
 
 RUN cd c_implementation && make xgb_userspace
 
