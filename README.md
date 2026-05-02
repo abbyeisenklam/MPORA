@@ -1,10 +1,10 @@
 # MPORA
 
-Artifact for:
+Multi-Path Online Resource Allocation (MPORA) artifact for:
 
 > **Uncertainty-Aware Resource Allocation for Multi-Path Programs with In-Kernel Predictions**
-> Abigail Eisenklam, Carlos A. Montenegro G., Xian Wang, Yifan Cai, Robert Gifford, Linh Thi Xuan Phan, Ricardo G. Sanfelice
-> ECRTS, 2026
+> Abigail Eisenklam, Carlos A. Montenegro G., Xian Wang, Yifan Cai, Robert Gifford, Linh Thi Xuan Phan, Ricardo G. Sanfelice,
+> in ECRTS, 2026
 
 This artifact trains and evaluates XGBoost models that predict two execution
 properties of SPEC CPU 2017 benchmarks — **remaining execution time**
@@ -63,6 +63,9 @@ MPORA/
 │   ├── xgb_utils_userspace.c
 │   ├── xgb_utils_userspace.h
 │   └── Makefile
+│
+├── kernel/
+│   └── mpora.c                   # MPORA kernel module implementation (corresponding to FIGURE-6, but code is view-only).
 │
 ├── splits/                       # Pre-computed train/val/test/WCP splits (per task)
 │
@@ -313,3 +316,7 @@ in the training set.
 | `xgb_fp_target_1.bin` | Fixed-point Q16.16 binary for `next_insn` |
 | `*.bin.meta.json` | Feature order and input dimension metadata for each binary |
 
+
+## MPORA Kernel Module
+
+`kernel/mpora.c` shows the main decision making code that implements MPORA inside of the Linux kernel. The main resource allocation function, which is shown in `mpora_ml_try_allocate()`, solves the optimization problem in EQUATION-3 for N = 1 by leveraging the fixed-point C-converted XGBoost model. It reads each job's execution state and input features from the task metadata (in-tree Linux modification), predicts the remaining execution time and instruction rate under each resource allocation, and then keeps track of the optimal resource allcoation solution (which it then returns). This code is view-only, since it requires integration with a custom kernel and specialized hardware to execute as intended.

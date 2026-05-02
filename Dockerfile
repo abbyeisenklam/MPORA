@@ -12,7 +12,8 @@ COPY profiles/ profiles/
 COPY splits/ splits/
 
 # Copy code only
-COPY *.py *.md *.txt *.sh c_implementation/ ./
+COPY *.py *.md *.txt *.sh ./
+COPY c_implementation/ c_implementation/
 
 RUN cd c_implementation && make xgb_userspace
 
