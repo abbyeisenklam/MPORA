@@ -65,7 +65,7 @@ MPORA/
 │   └── Makefile
 │
 ├── kernel/
-│   └── mpora.c                   # MPORA kernel module implementation (corresponding to FIGURE-6, but code is view-only).
+│   └── mpora.c                   # MPORA kernel module implementation (corresponding to FIGURE-6, but view-only)
 │
 ├── splits/                       # Pre-computed train/val/test/WCP splits (per task)
 │
