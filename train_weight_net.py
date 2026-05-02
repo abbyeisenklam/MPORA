@@ -219,7 +219,7 @@ def main():
             hi = exec_times.reindex(names).max()
             print(f"  {k}: {len(names)} inputs  exec_time=[{lo:.3e}, {hi:.3e}]")
 
-        plot_cluster_histogram(task, norm_df, clusters, "results")
+        plot_cluster_histogram(task, norm_df, clusters, f"results/{task}")
 
         models = [load_xgb_model(task, i) for i in range(len(OUTPUT_FEATURES))]
 
