@@ -1,0 +1,6 @@
+mcf,prev_budget,insn_sum,next_budget,prev_insn,inp_feat1,inp_feat2,prev_insn_1,prev_insn_2,prev_insn_3,prev_budget_1,prev_budget_2,prev_budget_3
+omnetpp,prev_budget,insn_sum,next_budget,prev_insn,inp_feat1,prev_insn_1,prev_insn_2,prev_insn_3,prev_insn_4,prev_budget_1,prev_budget_2,prev_budget_3,prev_budget_4
+xz,prev_budget,insn_sum,next_budget,prev_insn,inp_feat1,inp_feat2,prev_insn_1,prev_insn_2,prev_insn_3,prev_budget_1,prev_budget_2,prev_budget_3
+xalancbmk,prev_budget,insn_sum,next_budget,prev_insn,inp_feat1,prev_insn_1,prev_insn_2,prev_insn_3,prev_budget_1,prev_budget_2,prev_budget_3
+exchange2,prev_budget,insn_sum,next_budget,prev_insn,inp_feat1,inp_feat6,prev_insn_1,prev_insn_2,prev_budget_1,prev_budget_2
+x264,prev_budget,insn_sum,next_budget,prev_insn,inp_feat1,inp_feat2,inp_feat3,inp_feat4,prev_insn_1,prev_insn_2,prev_insn_3,prev_insn_4,prev_insn_5,prev_budget_1,prev_budget_2,prev_budget_3,prev_budget_4,prev_budget_5
