@@ -104,7 +104,7 @@ def plot(benchmarks, data, metric_cfg, out_path):
             ax.plot(deltas_us, arr[bi], color=color, linestyle=ls, marker=marker,
                     markersize=6, linewidth=2.5, label=benchmark)
 
-        ax.set_xlabel("Δ (μs)", fontsize=20)
+        ax.set_xlabel("Δ (ms)", fontsize=20)
         ax.set_ylabel(ylabel, fontsize=20)
         ax.set_xticks(deltas_us)
         ax.set_xticklabels([f"{d:.0f}" for d in deltas_us], fontsize=16)
