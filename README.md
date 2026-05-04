@@ -7,14 +7,14 @@ Multi-Path Online Resource Allocation (MPORA) artifact for:
 > in ECRTS, 2026
 
 This artifact trains and evaluates XGBoost models that predict two execution
-properties of SPEC CPU 2017 benchmarks — **remaining execution time**
-(`rem_time`) and **next instruction rate** (`next_insn`) — given lagged execution
-metrics obtained from profiling, the resource allocation, and features of
-the program's input. Trained models are exported to a compact Q16.16 fixed-point
+properties of SPEC CPU 2017 benchmarks -- **remaining execution time**
+(`rem_time`) and **next instructions retired** (`next_insn`) -- given lagged execution
+metrics obtained from profiling, a resource allocation, and features of
+the current input to the program. Trained models are exported to a compact Q16.16 fixed-point
 binary format and evaluated against a C inference library targeting low-overhead
 deployment inside of the kernel. Weighted conformal prediction (WCP) is then
-applied to produce statistically guaranteed prediction intervals, evaluated
-across execution-time scenarios.
+applied to produce high probability upper bounds on the prediction errors,
+across different operating scenarios.
 
 Details for reproducing specific results in the paper can be found by searching this file for the corresponding figure or table, for example, using keyword FIGURE-1 or TABLE-1.
 
