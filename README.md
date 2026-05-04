@@ -257,7 +257,7 @@ split 40/40/20 into calibration/weights/test_cp.
 | Model Size (FP C) | Size of the exported fixed-point binary |
 
 The files with these paths: `results/spec/<task>/delta=0.01/results.txt` reproduce the results that 
-are shown in TABLE-2 for Δ = 0.01.
+are shown in TABLE-2 for Δ = 0.01. Note that prediction speed will be hardware-dependent.
 
 **`xgb_mae_histogram.pdf`** — histogram of per-sample absolute errors for both
 targets (`rem_time` and `next_insn`) from the float XGBoost model. This 
