@@ -11,6 +11,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY profiles/ profiles/
 COPY splits/ splits/
 
+COPY LICENSE ./
+
 # Copy code only
 COPY *.py *.md *.txt *.sh ./
 COPY c_implementation/ c_implementation/
